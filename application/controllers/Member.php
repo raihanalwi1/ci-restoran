@@ -6,12 +6,14 @@ class Member extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('M_member');
+		$this->load->model('M_member','member');
 	}
 	public function index()
 	{
 		$data = array(
-			'mbr' => $this->M_member->data()
+			'title' => 'INI KELOMPOK',
+			'result' => $this->member->data()
+
 		);
         $this->load->view('page/header');
 		$this->load->view('member', $data);

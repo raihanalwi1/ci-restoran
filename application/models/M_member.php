@@ -5,7 +5,7 @@ class M_member extends CI_Model {
     public $table = "member";
 
     public function data(){
-        $query = "SELECT * FROM $this->table ORDER BY Nama_member ASC";
+        $query = "SELECT * FROM $this->table ORDER BY nama ASC";
         return $this->db->query($query)->result();
   
     }

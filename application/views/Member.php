@@ -8,25 +8,30 @@
 	
      <section class="testimonials" id="testimonials">
         <div class="title white">  
-            <h2 class="titleText">Kelompok <span> Kece </span></h2>
+            <h2 class="titleText">Kelompok <span> Kece   </span></h2>
         </div>
         
         <div class="content">
             <?php
-            $no = 1;
-            foreach($mbr as $m) :
-                ?>
-
+            $no=1;
+			foreach ($result as $rs) {
+            echo
+            '
             <div class="box">
                 <div class="imgBx">
-                    <img src="<?=base_url()?>assets/css/images/testi1.jpg"/>
+                    <img src="'.base_url().''.$rs->gambar.'"/>
                 </div>
      
                 <div class="text">
-                    <h3><?= $m['nama_member']?></h3>
+                    <h3>'.$rs->nama.'</h3>
+                    <h3>'.$rs->npm.'</h3>
                 </div>
             </div>
-           <?php $no++; endforeach ?>
+            ';
+            $no++;
+            }
+               ?>
+
         </div>
     </section>
 <!-- 
